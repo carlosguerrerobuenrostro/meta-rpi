@@ -111,16 +111,6 @@ elif [ -f ./wpa_supplicant.conf ]; then
 	sudo cp ./wpa_supplicant.conf /media/card/etc/wpa_supplicant.conf
 fi
 
-
-if [ -f ${SRCDIR}/inittab ]; then
-	echo "Writing inittab to /media/card/etc/"
-	sudo cp ${SRCDIR}/inittab /media/card/etc/inittab
-elif [ -f ./inittab ]; then
-	echo "Writing ./inittab to /media/card/etc/"
-	sudo cp ./inittab /media/card/etc/inittab
-fi
-
-
 echo "Unmounting ${DEV}"
 sudo umount ${DEV}
 
